@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin.PTITScan">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.ScanCodeActivitysearch"></activity>
+        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.ScanCodeActivity" />
+        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.ScanCodeActivitydel" />
+        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.viewInventoryActivity" />
+        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.scanItemsActivity" />
+        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.DeleteItemsActivity"/>
+        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.AddItemActivity" />
+        <activity android:name="com.example.admin.PTITScan.view.activities.dashboardActivity" />
+        <activity android:name="com.example.admin.PTITScan.view.activities.Authentication.RegisterActivity" />
+        <activity android:name="com.example.admin.PTITScan.view.activities.Authentication.LoginActivity" />
+        <activity android:name="com.example.admin.PTITScan.view.activities.MainActivity" />
+        <activity
+            android:name="com.example.admin.PTITScan.view.activities.SplashsActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
