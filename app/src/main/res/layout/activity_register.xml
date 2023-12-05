@@ -89,7 +89,7 @@
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_forum_black_24dp"
         android:ems="10"
-        android:hint="Tên phòng ban"
+        android:hint="Họ và tên"
         android:inputType="textPersonName"
         android:textColor="#fff"
         android:textColorHint="#ffff"

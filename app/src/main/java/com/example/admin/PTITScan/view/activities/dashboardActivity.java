@@ -1,9 +1,7 @@
 package com.example.admin.PTITScan.view.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,12 +9,15 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import com.example.admin.PTITScan.R;
 import com.example.admin.PTITScan.view.activities.Authentication.LoginActivity;
 import com.example.admin.PTITScan.view.activities.ManageItem.AddItemActivity;
-import com.example.admin.PTITScan.view.activities.ManageItem.DeleteItemsActivity;
-import com.example.admin.PTITScan.view.activities.ManageItem.scanItemsActivity;
-import com.example.admin.PTITScan.view.activities.ManageItem.viewInventoryActivity;
+import com.example.admin.PTITScan.view.activities.ManageItem.ImportActivity;
+import com.example.admin.PTITScan.view.activities.ManageItem.ListItemActivity;
+import com.example.admin.PTITScan.view.activities.ManageStorage.ListStorageActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -39,7 +40,7 @@ public class dashboardActivity extends AppCompatActivity implements View.OnClick
         String finaluser=users.getEmail();
         String result = finaluser.substring(0, finaluser.indexOf("@"));
         String resultemail = result.replace(".","");
-        firebasenameview.setText("Welcome, "+resultemail);
+        firebasenameview.setText("Xin chào, "+resultemail);
 
 
         addItems = (CardView)findViewById(R.id.addItems);
@@ -59,10 +60,9 @@ public class dashboardActivity extends AppCompatActivity implements View.OnClick
         Intent i;
 
         switch (view.getId()){
-            case R.id.addItems : i = new Intent(this, AddItemActivity.class); startActivity(i); break;
-            case R.id.deleteItems : i = new Intent(this, DeleteItemsActivity.class);startActivity(i); break;
-            case R.id.scanItems : i = new Intent(this, scanItemsActivity.class);startActivity(i); break;
-            case R.id.viewInventory : i = new Intent(this, viewInventoryActivity.class);startActivity(i); break;
+            case R.id.addItems : i = new Intent(this, ListItemActivity.class); startActivity(i); break;
+            case R.id.deleteItems : i = new Intent(this, ImportActivity.class);startActivity(i); break;
+            case R.id.viewInventory : i = new Intent(this, ListStorageActivity.class);startActivity(i); break;
             default: break;
         }
     }
@@ -77,8 +77,7 @@ public class dashboardActivity extends AppCompatActivity implements View.OnClick
         firebaseAuth.signOut();
         finish();
         startActivity(new Intent(dashboardActivity.this, LoginActivity.class));
-        Toast.makeText(dashboardActivity.this,"LOGOUT SUCCESSFUL", Toast.LENGTH_SHORT).show();
-
+        Toast.makeText(dashboardActivity.this,"Đăng xuất thành công", Toast.LENGTH_SHORT).show();
     }
 
 

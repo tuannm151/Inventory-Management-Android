@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AutocompleteFragmentStyle" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+        <!-- Add more style attributes as needed -->
+    </style>
+
 </resources>

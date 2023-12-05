@@ -1,11 +1,14 @@
 package com.example.admin.PTITScan.view.activities.ManageItem;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.zxing.Result;
 
@@ -25,9 +28,11 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
 
     @Override
     public void handleResult(Result result) {
-
-        AddItemActivity.resulttextview.setText(result.getText());
-
+        Log.d("QRCodeScanner", result.getText());
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra("result",result.getText());
+        setResult(RESULT_OK,returnIntent);
+        finish();
         onBackPressed();
     }
 

@@ -1,37 +1,53 @@
 package com.example.admin.PTITScan.model;
 
-import com.example.admin.PTITScan.enums.ItemType;
-
 public class Item {
+    private String id;
     private String name;
-    private ItemType type;
+    private String category;
     private String price;
     private String barcode;
-
-    private String desscription;
-
-    private String imageUrl;
 
 
     public Item() {
 
     }
 
-    public Item(String name, ItemType type, String price, String barcode, String desscription, String imageUrl) {
+    public Item(String name, String category, String price, String barcode) {
+
         this.name = name;
-        this.type = type;
+        this.category = category;
         this.price = price;
         this.barcode = barcode;
-        this.desscription = desscription;
-        this.imageUrl = imageUrl
     }
 
+    public Item(String id, String name, String category, String price, String barcode) {
+        this.id = id;
+        this.name = name;
+        this.category = category;
+        this.price = price;
+        this.barcode = barcode;
+    }
+    public String getName() {
+        return name;
+    }
 
+    public String getCategory() {
+        return category;
+    }
 
+    public String getPrice() {
+        return price;
+    }
 
+    public String getBarcode() {
+        return barcode;
+    }
 
+    public String getId() {
+        return id;
+    }
 
-
-
-
+    public void setId(String id) {
+        this.id = id;
+    }
 }

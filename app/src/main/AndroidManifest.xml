@@ -3,7 +3,9 @@
     package="com.example.admin.PTITScan">
 
     <uses-permission android:name="android.permission.CAMERA" />
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-feature android:name="android.hardware.camera" />
 
 
@@ -14,17 +16,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.ScanCodeActivitysearch"></activity>
         <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.ScanCodeActivity" />
-        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.ScanCodeActivitydel" />
-        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.viewInventoryActivity" />
-        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.scanItemsActivity" />
-        <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.DeleteItemsActivity"/>
         <activity android:name="com.example.admin.PTITScan.view.activities.ManageItem.AddItemActivity" />
         <activity android:name="com.example.admin.PTITScan.view.activities.dashboardActivity" />
         <activity android:name="com.example.admin.PTITScan.view.activities.Authentication.RegisterActivity" />
         <activity android:name="com.example.admin.PTITScan.view.activities.Authentication.LoginActivity" />
         <activity android:name="com.example.admin.PTITScan.view.activities.MainActivity" />
+        <activity android:name=".view.activities.ManageStorage.ListStorageActivity"/>
+        <activity android:name=".view.activities.ManageItem.ListItemActivity"/>
+        <activity android:name=".view.activities.ManageItem.ImportActivity"/>
         <activity
             android:name="com.example.admin.PTITScan.view.activities.SplashsActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -34,6 +34,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCz3JsSgIfZJZB2ri8XaNrfMJkYFa94xYI" />
     </application>
 
 </manifest>

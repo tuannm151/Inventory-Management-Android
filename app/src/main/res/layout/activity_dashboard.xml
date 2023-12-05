@@ -46,7 +46,7 @@
             <!-- Row 1 -->
 
             <!-- Column 1 -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/addItems"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -76,19 +76,20 @@
                     <TextView
                         android:layout_width="match_parent"
 
-                        android:layout_height="34dp"
+                        android:layout_height="56dp"
                         android:layout_marginTop="10dp"
-                        android:text="Thêm sản phẩm"
+                        android:text="Quản lý sản phẩm"
+                        android:textAlignment="center"
                         android:textSize="17dp"
                         android:textStyle="bold" />
 
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- Column 2 -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/deleteItems"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -119,20 +120,21 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Xoá sản phẩm"
+                        android:text="Nhập xuất sản phẩm"
+                        android:textAlignment="center"
                         android:textSize="17dp"
                         android:textStyle="bold" />
 
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!-- Row 2 -->
 
             <!-- Column 1 -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/scanItems"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -164,7 +166,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:text="Xem thông tin sản phẩm"
+                        android:text="Quản lý kho hàng"
                         android:textAlignment="center"
                         android:textSize="17dp"
                         android:textStyle="bold" />
@@ -172,10 +174,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!-- Column 2 -->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/viewInventory"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -207,7 +209,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="38dp"
                         android:layout_marginTop="10dp"
-                        android:text=" Kho Hàng"
+                        android:text="Kho Hàng"
+                        android:textAlignment="center"
                         android:textSize="17dp"
                         android:textStyle="bold" />
 
@@ -215,7 +218,7 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!-- Row 2 -->
